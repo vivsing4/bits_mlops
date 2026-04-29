@@ -19,6 +19,7 @@ This repository contains a production-grade machine learning solution designed t
 * `.github/workflows/`: YAML configurations for the CI/CD pipeline.
 * `Dockerfile`: Configuration for building the model-serving container.
 
+```
 heart-disease-mlops/
 ├── .github/
 │   └── workflows/
@@ -48,6 +49,7 @@ heart-disease-mlops/
 ├── MLproject                     # MLflow project definition (Optional) [cite: 23]
 ├── README.md                     # Project documentation and setup [cite: 48, 54]
 └── requirements.txt              # Project dependencies [cite: 29, 62, 72]
+```
 
 ## Getting Started
 1. **Clone the Repo:** `git clone <repo-url>`
