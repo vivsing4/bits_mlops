@@ -19,6 +19,36 @@ This repository contains a production-grade machine learning solution designed t
 * `.github/workflows/`: YAML configurations for the CI/CD pipeline.
 * `Dockerfile`: Configuration for building the model-serving container.
 
+heart-disease-mlops/
+├── .github/
+│   └── workflows/
+│       └── main.yml              # CI/CD Pipeline (Linting, Testing, Training) [cite: 34, 65]
+├── data/
+│   ├── raw/                      # Original dataset (Heart Disease UCI) [cite: 8, 63]
+│   └── processed/                # Cleaned/Encoded data for training [cite: 15]
+├── deploy/
+│   ├── k8s-manifests/            # Kubernetes Deployment & Service YAMLs [cite: 42, 66]
+│   └── helm-chart/               # Helm charts for scalable deployment [cite: 43, 66]
+├── models/
+│   └── model_v1.pkl              # Saved model artifact (MLflow/Pickle) [cite: 29]
+├── notebooks/
+│   └── 01_eda_and_modeling.ipynb # EDA and initial model experiments [cite: 13, 64]
+├── src/                          # Core application logic [cite: 64]
+│   ├── __init__.py
+│   ├── data_loader.py            # Script to download/clean data [cite: 15, 63]
+│   ├── train.py                  # Training script with MLflow logging [cite: 19, 23]
+│   ├── pipeline.py               # Preprocessing/transformers logic 
+│   └── app.py                    # FastAPI/Flask API entry point [cite: 38]
+├── tests/                        # Automated unit tests [cite: 33, 64]
+│   ├── test_data.py              # Tests for data processing logic [cite: 33]
+│   └── test_model.py             # Tests for model inference and API [cite: 33]
+├── .dockerignore                 # Files to exclude from Docker build
+├── .gitignore                    # Files to exclude from Git (data, venv, pyc)
+├── Dockerfile                    # Containerization instructions [cite: 38, 62]
+├── MLproject                     # MLflow project definition (Optional) [cite: 23]
+├── README.md                     # Project documentation and setup [cite: 48, 54]
+└── requirements.txt              # Project dependencies [cite: 29, 62, 72]
+
 ## Getting Started
 1. **Clone the Repo:** `git clone <repo-url>`
 2. **Install Dependencies:** `pip install -r requirements.txt`
