@@ -1,0 +1,23 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+
+# OS/editor
+.DS_Store
+
+# Generated artifacts
+mlruns/
+reports/
+*.log
+
+# Data artifacts (keep folder structure)
+data/raw/*.csv
+data/processed/*.csv
+
