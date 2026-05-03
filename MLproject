@@ -1,0 +1,12 @@
+name: heart_disease_mlops
+
+python_env: python_env.yaml
+
+entry_points:
+  download_data:
+    command: "python -m src.data_loader --raw-output data/raw/heart_disease.csv --processed-output data/processed/heart_disease_clean.csv"
+  eda:
+    command: "python -m src.eda --raw-data data/raw/heart_disease.csv --output-dir reports/figures"
+  train:
+    command: "python -m src.train --raw-data data/raw/heart_disease.csv --processed-data data/processed/heart_disease_clean.csv --model-output models/model_v1.pkl --metrics-output models/metrics.json"
+

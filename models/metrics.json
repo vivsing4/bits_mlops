@@ -1,0 +1,18 @@
+{
+  "logistic_regression": {
+    "test_accuracy": 0.84,
+    "test_precision": 0.8,
+    "test_recall": 0.8695652173913043,
+    "test_roc_auc": 0.9210950080515298
+  },
+  "random_forest": {
+    "test_accuracy": 0.82,
+    "test_precision": 0.7916666666666666,
+    "test_recall": 0.8260869565217391,
+    "test_roc_auc": 0.9066022544283414
+  },
+  "best_model": {
+    "name": "logistic_regression",
+    "test_roc_auc": 0.9210950080515298
+  }
+}
