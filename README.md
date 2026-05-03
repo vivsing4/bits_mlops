@@ -151,7 +151,7 @@ flowchart LR
 		F --> G[src.app FastAPI]
 		G --> H[Docker Image]
 		H --> I[Kubernetes Service/Ingress]
-		G --> J[/metrics -> Prometheus/Grafana]
+		G --> J[/metrics -> "Prometheus/Grafana"]
 ```
 
 ## 10. Tests
