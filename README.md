@@ -143,15 +143,16 @@ helm upgrade --install heart-disease-api deploy/helm-chart
 
 ```mermaid
 flowchart LR
-		A[UCI Dataset] --> B[src.data_loader]
-		B --> C[data/processed]
-		C --> D[src.train]
-		D --> E[MLflow Tracking]
-		D --> F[models/model_v1.pkl]
-		F --> G[src.app FastAPI]
-		G --> H[Docker Image]
-		H --> I[Kubernetes Service/Ingress]
-		G --> J[/metrics -> "Prometheus/Grafana"]
+        A[UCI Dataset] --> B[src.data_loader]
+        B --> C[data/processed]
+        C --> D[src.train]
+        D --> E[MLflow Tracking]
+        D --> F[models/model_v1.pkl]
+        F --> G[src.app FastAPI]
+        G --> H[Docker Image]
+        H --> I[Kubernetes Service/Ingress]
+        G --> J["/metrics"]
+        J --> K["Prometheus/Grafana"]
 ```
 
 ## 10. Tests
