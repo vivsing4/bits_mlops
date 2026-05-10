@@ -104,3 +104,41 @@ Submit a professional Markdown or PDF report including:
 * All scripts must execute from a clean setup using the requirements file.
 * Model must serve correctly in an isolated environment (Docker; container build/test proof required).
 * Pipeline must fail on code or test errors and give clear logs.
+
+---
+
+## 7. Final Submission Readiness (Final Pass - 10 May 2026)
+
+### Requirement Coverage Checklist
+
+- [x] Data acquisition script/instructions provided.
+- [x] Data preprocessing and cleaned dataset generated.
+- [x] EDA workflow and visualizations implemented.
+- [x] Two classifiers implemented (Logistic Regression and Random Forest).
+- [x] Cross-validation and evaluation metrics (accuracy, precision, recall, ROC-AUC) implemented.
+- [x] MLflow experiment tracking with params, metrics, and artifacts.
+- [x] Reproducible model artifact and preprocessing pipeline packaging.
+- [x] Unit tests available for data and API/model behavior.
+- [x] CI workflow includes linting, tests, training, and artifact upload.
+- [x] FastAPI inference API with `/predict`, `/health`, and `/metrics` endpoints.
+- [x] Kubernetes manifests and Helm chart included.
+- [x] Reporting and evidence folders present (`reports/`, `screenshots/`).
+- [x] Final report document present (`final_report.docx`).
+
+### Validation Notes
+
+- Lint check passed in the project virtual environment.
+- Unit tests passed (2 tests).
+- Training smoke run completed successfully with `--max-samples 250`.
+- Docker CLI is installed, but local image build requires Docker daemon to be running.
+- Kubernetes/Helm configs are present and documented; command-level validation depends on local tool availability and active cluster/runtime.
+
+### Evidence Paths
+
+- Project usage and deliverables mapping: `README.md`
+- CI workflow: `.github/workflows/main.yml`
+- Source code: `src/`
+- Tests: `tests/`
+- Deployment: `deploy/k8s-manifests/`, `deploy/helm-chart/`
+- Screenshot guidance: `screenshots/README.md`
+- Report artifacts guidance: `reports/README.md`
