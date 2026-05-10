@@ -12,6 +12,10 @@ This project implements the complete assignment workflow for heart disease risk 
 - Dockerized deployment and Kubernetes/Helm manifests
 - CI workflow for linting, tests, training, and artifacts
 
+## 0. Demo & Walkthrough
+
+You can find the recording at [BITS Sharepoint](https://wilpbitspilaniacin0-my.sharepoint.com/:v:/g/personal/2025cs05016_wilp_bits-pilani_ac_in/IQBClmzoRundSKIdABihW6U8AWPtZivOM7Wu9BbNUtGVjdc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Ij8ymC)
+
 ## 1. Setup
 
 ```bash
