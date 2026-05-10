@@ -14,7 +14,8 @@ venv/
 
 # Generated artifacts
 mlruns/
-reports/
+reports/*
+!reports/README.md
 *.log
 
 # Data artifacts (keep folder structure)
