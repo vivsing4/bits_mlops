@@ -169,3 +169,56 @@ MLflow commands defined in `MLproject`:
 - `eda`
 - `train`
 
+## 12. Assignment Deliverables Map
+
+- Source code, env files, Dockerfile: `src/`, `requirements.txt`, `python_env.yaml`, `Dockerfile`
+- Cleaned data and download script/instructions: `data/processed/heart_disease_clean.csv`, `src/data_loader.py`, `data/raw/README.md`
+- Notebook/script deliverables: `notebooks/01_eda_and_modeling.ipynb`, `src/eda.py`, `src/train.py`, `src/app.py`
+- Unit tests: `tests/`
+- CI workflow: `.github/workflows/main.yml`
+- Deployment assets: `deploy/k8s-manifests/`, `deploy/helm-chart/`
+- Report document: `final_report.docx`
+- Reporting evidence folder: `screenshots/`
+
+## 13. Local Deployment Access Instructions
+
+If you are not publishing a public URL, use the following local verification flow to satisfy the assignment access requirement:
+
+1. Build and run the API container:
+
+```bash
+docker build -t heart-disease-api:latest .
+docker run --rm -p 8000:8000 heart-disease-api:latest
+```
+
+2. Verify health and prediction endpoints:
+
+```bash
+curl http://localhost:8000/health
+curl -X POST http://localhost:8000/predict \
+	-H "Content-Type: application/json" \
+	-d '{
+		"age": 58,
+		"sex": 1,
+		"cp": 2,
+		"trestbps": 130,
+		"chol": 250,
+		"fbs": 0,
+		"restecg": 1,
+		"thalach": 140,
+		"exang": 0,
+		"oldpeak": 1.2,
+		"slope": 2,
+		"ca": 0,
+		"thal": 2
+	}'
+```
+
+3. (Kubernetes) Deploy and verify via port-forward:
+
+```bash
+kubectl apply -f deploy/k8s-manifests
+kubectl port-forward svc/heart-disease-api 8000:80
+curl http://localhost:8000/health
+```
+
