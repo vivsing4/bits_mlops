@@ -69,7 +69,7 @@ mlflow ui --backend-store-uri ./mlruns
 ## 5. Run API Locally
 
 ```bash
-uvicorn src.app:app --reload --host 0.0.0.0 --port 8000
+uvicorn src.app:app --reload --host 127.0.0.1 --port 8000
 ```
 
 Health check:

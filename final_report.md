@@ -696,12 +696,46 @@ pytest -q
 | ROC curve — LR | `reports/roc_logistic_regression.png` | ✅ Present |
 | ROC curve — RF | `reports/roc_random_forest.png` | ✅ Present |
 | Model metrics | `models/metrics.json` | ✅ Present |
-| Screenshots folder | `screenshots/` | ⚠️ Folder present — add evidence images |
+| Screenshots folder | `screenshots/` | ✅ 8 evidence images present |
 | Final written report (docx) | `final_report.docx` | ✅ Complete (45 KB) |
 | Final written report (md) | `final_report.md` | ✅ This document |
 | Video transcript | `VIDEO_TRANSCRIPT.md` | ✅ Complete — record video |
 | Short video | — | ⚠️ Not yet recorded |
 | Deployed API URL | — | ⚠️ Local instructions documented in `README.md § 13` |
+
+### 15.1 Screenshot Evidence
+
+![Screenshot 01: Data Pipeline Run](screenshots/01_data_pipeline.png)
+
+*Figure 6: Data download and preprocessing pipeline execution output.*
+
+![Screenshot 02: EDA Outputs](screenshots/02_eda_outputs.png)
+
+*Figure 7: Generated EDA artefacts in `reports/figures/`.*
+
+![Screenshot 03: MLflow Runs](screenshots/03_mlflow_runs.png)
+
+*Figure 8: MLflow experiments and run details with logged metrics/artefacts.*
+
+![Screenshot 04: CI Pipeline Success](screenshots/04_ci_pipeline_success.png)
+
+*Figure 9: Successful GitHub Actions CI workflow execution.*
+
+![Screenshot 05: Docker Predict](screenshots/05_docker_predict.png)
+
+*Figure 10: Dockerised API health and prediction verification.*
+
+![Screenshot 06: Kubernetes Resources](screenshots/06_k8s_resources.png)
+
+*Figure 11: Kubernetes resources listing for deployment, service, and ingress.*
+
+![Screenshot 07: Kubernetes Health Check](screenshots/07_k8s_health_check.png)
+
+*Figure 12: API `/health` and `/predict` checks after Kubernetes deployment.*
+
+![Screenshot 08: Metrics Endpoint](screenshots/08_metrics_endpoint.png)
+
+*Figure 13: Prometheus-compatible `/metrics` endpoint validation output.*
 
 ---
 
