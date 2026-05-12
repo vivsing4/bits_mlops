@@ -2,7 +2,8 @@
 
 **Course:** MLOps (S2-25_AMLCSZG523)  
 **Institution:** BITS Pilani  
-**Total Marks:** 50  
+**Submitter:** SINGH VIVEK CHANDRAPAL  
+**BITS-ID:** 2025cs05016  
 **Date:** 10 May 2026
 
 ---
